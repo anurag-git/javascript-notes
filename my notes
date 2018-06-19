@@ -32,5 +32,30 @@ const sum = function (...args) {
   for(let i = 0; i < args.length; i++) {
     result += args[i];
   }
+  
   return result;
 }
+
+Function using reduce()
+----------------------------------
+const sum = function (...args) {
+  console.log(args);
+  let result = 0;
+  result = args.reduce((current, prev) => {
+    return current + prev;
+  });
+  return result;
+}
+
+Short form of reduce function usage
+-------------------------------------
+const sum = function (...args) {
+  console.log(args);
+  let result = 0;
+  result = args.reduce((current, prev) => current + prev);
+  return result;
+}
+
+All functions can be called as shown below:
+--------------------------------------------
+sum(1,2,3,4,5);
