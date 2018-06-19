@@ -12,3 +12,25 @@ const sayHello = function() {
 const sayHello = () => {
   console.log("Hello !");
 }
+
+Function with "arguments" parameter which can take varibale no of arguments
+------------------------------------------------------------------------------
+const sum = function () {
+  console.log(arguments);
+  let result = 0;
+  for(let i = 0; i < arguments.length; i++) {
+    result += arguments[i];
+  }
+  return result;
+}
+
+Function with REST parameter
+-------------------------------
+const sum = function (...args) {
+  console.log(args);
+  let result = 0;
+  for(let i = 0; i < args.length; i++) {
+    result += args[i];
+  }
+  return result;
+}
